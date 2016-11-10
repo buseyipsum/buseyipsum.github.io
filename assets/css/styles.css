@@ -12,10 +12,20 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License. */
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 html, body {
   font-family: "Work Sans", "Helvetica", sans-serif;
   margin: 0;
   padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "League Spartan" !important;
+  line-height: 1.1; }
 
 .mdl-layout .mdl-layout__tab-bar, .mdl-layout .mdl-layout__tab-bar-container {
   overflow: visible; }
@@ -26,16 +36,19 @@ html, body {
   box-sizing: border-box;
   height: 100%;
   width: 100%; }
-  .mdl-layout__tab-bar .mdl-layout__tab {
-    height: 64px;
+  .mdl-layout__tab-bar label {
+    height: 65px;
     font-size: 20px;
-    line-height: 64px; }
-    .mdl-layout__tab-bar .mdl-layout__tab.is-active {
+    line-height: 64px;
+    margin: 0;
+    border-bottom: 3px solid;
+    border-bottom-color: transparent; }
+  .mdl-layout__tab-bar input[type="radio"] {
+    display: none; }
+    .mdl-layout__tab-bar input[type="radio"]:checked + label {
       color: white;
-      font-weight: 600; }
-      .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
-        background-color: white;
-        height: 4px; }
+      font-weight: 600;
+      border-bottom-color: white; }
 
 main > .mdl-layout__tab-panel {
   padding: 8px;
@@ -226,7 +239,7 @@ input[type=number] {
 
 span.spinner {
   position: relative;
-  top: 0;
+  top: 3px;
   left: 25px;
   height: auto;
   user-select: none;
@@ -237,13 +250,13 @@ span.spinner {
   span.spinner > .sub, span.spinner > .add {
     float: none;
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     text-align: center;
     font-family: League Spartan;
     font-weight: 700;
     font-size: 1.2em;
-    line-height: 45px;
+    line-height: 30px;
     color: white;
     border: none;
     border-radius: 100%;
@@ -254,7 +267,7 @@ span.spinner {
     -moz-transition: 0.1s linear;
     -webkit-transition: 0.1s linear; }
     span.spinner > .sub:hover, span.spinner > .add:hover {
-      background: #93504c;
+      background: rgba(255, 255, 255, 0.5);
       color: #25323b; }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
