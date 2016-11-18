@@ -27,8 +27,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "League Spartan" !important;
   line-height: 1.1; }
 
-.mdl-layout .mdl-layout__tab-bar, .mdl-layout .mdl-layout__tab-bar-container {
-  overflow: visible; }
+.mdl-layout {
+  height: auto !important; }
+  .mdl-layout .mdl-layout__tab-bar, .mdl-layout .mdl-layout__tab-bar-container {
+    overflow: visible; }
+  .mdl-layout__header-row {
+    padding: 0; }
+    @media screen and (min-width: 43.75rem) {
+      .mdl-layout__header-row {
+        padding: 0 16px 0 72px; } }
+    .mdl-layout__header-row h1 {
+      font-size: 3.75rem; }
+      @media screen and (min-width: 37.5rem) {
+        .mdl-layout__header-row h1 {
+          font-size: 7rem; } }
 
 .mdl-layout__tab-bar {
   padding: 0;
@@ -289,13 +301,39 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
       flex: 2; }
 
 .bi-nav--controls {
-  height: 65px;
+  height: 130px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   position: relative; }
+  @media screen and (min-width: 37.5rem) {
+    .bi-nav--controls {
+      flex-direction: row;
+      height: 65px; } }
   .bi-nav--controls > div {
     flex: 1;
     text-align: center; }
   .bi-nav--controls-fab {
     position: absolute;
     right: 5vw;
-    top: 40px; }
+    bottom: -25px; }
+  .bi-nav--controls-type {
+    width: auto; }
+  .bi-nav--controls-number form {
+    margin-top: 20px; }
+    @media screen and (min-width: 37.5rem) {
+      .bi-nav--controls-number form {
+        margin-top: 0 !important; } }
+  .bi-nav--controls .bi-nav--spacer {
+    display: none; }
+    @media screen and (min-width: 37.5rem) {
+      .bi-nav--controls .bi-nav--spacer {
+        display: inline-flex; } }
+
+.mdl-color--primary {
+  background-color: #8d3aff !important; }
+  .mdl-color--primary-dark {
+    background-color: #7d37dd !important; }
+.mdl-color--accent {
+  background-color: #f24fd9 !important; }
