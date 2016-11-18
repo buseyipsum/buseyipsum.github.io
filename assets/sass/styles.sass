@@ -16,6 +16,7 @@
 @import "bourbon/bourbon"
 @import "neat/neat"
 
+
 html, body
   font-family: 'Work Sans', 'Helvetica', sans-serif
   margin: 0
@@ -27,8 +28,17 @@ h1,h2,h3,h4,h5,h6
 
 
 .mdl-layout
+  height: auto !important
   .mdl-layout__tab-bar, .mdl-layout__tab-bar-container
     overflow: visible
+  &__header-row
+    padding: 0
+    +media(rem(700))
+      padding: 0 16px 0 72px
+    h1
+      font-size: rem(60)
+      +media(rem(600))
+        font-size: rem(112)
 
 
 .mdl-layout__tab-bar
@@ -323,13 +333,37 @@ input[type=number]
       padding-top: 13px
       flex: 2
 .bi-nav--controls
-  height: 65px
+  height: 130px
+  flex-direction: column
+  align-items: center
+  align-content: center
   justify-content: center
   position: relative
+  +media(rem(600))
+    flex-direction: row
+    height: 65px
   >div
     flex: 1
     text-align: center
   &-fab
     position: absolute
     right: 5vw
-    top: 40px
+    bottom: -25px
+  &-type
+    width: auto
+  &-number
+    form
+      margin-top: 20px
+      +media(rem(600))
+        margin-top: 0 !important
+  .bi-nav--spacer
+    display: none
+    +media(rem(600))
+      display: inline-flex
+.mdl-color
+  &--primary
+    background-color: #8d3aff !important
+    &-dark
+      background-color: #7d37dd !important
+  &--accent
+    background-color: #f24fd9 !important
