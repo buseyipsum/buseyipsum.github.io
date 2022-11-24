@@ -14,6 +14,12 @@ An Ipsum Generator Chock Full of Buseyisms
 
 
 
+## Changelog
+
+20221124
+- noticed some issues recently so I decided to look into it
+- jQuery needs https
+
 #### License
 
 MIT
