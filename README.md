@@ -18,7 +18,9 @@ An Ipsum Generator Chock Full of Buseyisms
 
 20221124
 - noticed some issues recently so I decided to look into it
-- jQuery needs https
+- jQuery needs https - fixed like 99% of the problems
+- removed favicon declarations - throwing 404 errors
+  - will make favicons and fix later
 
 #### License
 
